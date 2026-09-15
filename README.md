@@ -15,7 +15,7 @@
 
 直接用浏览器打开 `index.html` 即可离线阅读，无需安装依赖。
 
-仓库启用 GitHub Pages 后，也可直接通过网页地址在线访问。
+在线浏览：[LeetCode 热题 100 网页版](https://nicholaszhao-zhenglin.github.io/leetcode-hot100/)
 
 ## 文件
 
