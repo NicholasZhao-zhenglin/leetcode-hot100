@@ -5,8 +5,8 @@
 <meta name="color-scheme" content="light dark"><meta name="description" content="LeetCode 热题 100 分类题解：17 个算法分类、100 道完整题解，支持离线阅读、搜索、收藏和学习进度。">
 <title>LeetCode 热题 100 · 算法手册</title>
 <style>
-:root{--bg:#f8f9f6;--surface:#fff;--soft:#f1f4ee;--text:#24352f;--muted:#78817b;--border:#e4e9e1;--green:#32745a;--green-hover:#22563f;--green-bg:#e9f2e9;--sidebar:#f0f3ec;--gold:#a6792d;--red:#b76058;--shadow:0 10px 40px #23352b08;--code:#202c2b;--code-text:#e4eee5}
-html.dark{--bg:#161e1b;--surface:#1d2823;--soft:#25332b;--text:#e2ebe4;--muted:#9daaa0;--border:#334138;--green:#a0d5ad;--green-hover:#c4e9c3;--green-bg:#2a4132;--sidebar:#19231d;--gold:#d5b773;--red:#e39a93;--shadow:none;--code:#101a16;--code-text:#e4eee5}
+:root{--bg:#f8f9f6;--surface:#fff;--soft:#f1f4ee;--text:#24352f;--muted:#78817b;--border:#e4e9e1;--green:#32745a;--green-hover:#22563f;--green-bg:#e9f2e9;--sidebar:#f0f3ec;--gold:#a6792d;--red:#b76058;--shadow:0 10px 40px #23352b08;--code:#202c2b;--code-text:#e4eee5;--blue:#3c6f8f;--blue-bg:#e8f1f7;--none:#7d8a82;--none-bg:#eef1ec}
+html.dark{--bg:#161e1b;--surface:#1d2823;--soft:#25332b;--text:#e2ebe4;--muted:#9daaa0;--border:#334138;--green:#a0d5ad;--green-hover:#c4e9c3;--green-bg:#2a4132;--sidebar:#19231d;--gold:#d5b773;--red:#e39a93;--shadow:none;--code:#101a16;--code-text:#e4eee5;--blue:#94c4dd;--blue-bg:#22323c;--none:#9daaa0;--none-bg:#243129}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:0}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}a{color:inherit;text-decoration:none}button{color:inherit}button:disabled{cursor:default;opacity:.45}svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;vertical-align:middle}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #80b996;outline-offset:4px}button{border:0}::selection{background:#c1ddc3;color:#183c2a}.skip{position:fixed;left:20px;top:-70px;background:var(--surface);padding:12px;z-index:100}.skip:focus{top:10px}
 .sidebar{position:fixed;inset:0 auto 0 0;width:252px;background:var(--sidebar);border-right:1px solid var(--border);z-index:40;display:flex;flex-direction:column;padding:30px 20px 20px}.brand{display:flex;gap:11px;align-items:center;margin:0 9px 26px}.brand-icon{background:var(--green);color:var(--bg);width:39px;height:39px;border-radius:12px;display:grid;place-items:center}.brand-icon svg{width:24px;height:24px}.brand-name{font-size:17px;font-weight:750;letter-spacing:-.4px}.brand-sub{font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;line-height:1.5}.nav-home{display:flex;gap:11px;align-items:center;padding:11px 13px;border-radius:9px;font-weight:650}.nav-home.active{background:var(--green-bg);color:var(--green)}.nav-label{font-size:10px;letter-spacing:2px;color:var(--muted);margin:25px 13px 11px}.chapters{overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:var(--border) transparent;padding-right:2px}.chapter-link{display:flex;align-items:center;gap:12px;margin:2px 0;padding:8px 12px;border-radius:8px;color:var(--muted);font-size:12px;min-height:35px}.chapter-link:hover{background:var(--green-bg);color:var(--text)}.chapter-link.active{background:var(--surface);color:var(--green);font-weight:650;box-shadow:var(--shadow)}.chapter-num{font-size:10px;opacity:.7;font-family:ui-monospace,monospace;min-width:15px}.chapter-count{margin-left:auto;font-size:10px;opacity:.8}.side-bottom{padding:17px 12px 0;margin-top:14px;border-top:1px solid var(--border)}.progress-label{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.progress-label b{color:var(--green);font-weight:600}.progress-track{height:4px;border-radius:4px;background:var(--border);overflow:hidden;margin-top:10px}.progress-fill{height:100%;background:var(--green);transition:width .3s}.local-note{font-size:10px;color:var(--muted);margin-top:9px}
 .shell{margin-left:252px}.topbar{height:77px;position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 44px;gap:16px}.breadcrumb{display:flex;align-items:center;gap:12px;font-size:12px;min-width:0}.breadcrumb>span{color:var(--muted)}.breadcrumb b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top-actions{display:flex;align-items:center;gap:14px}.offline{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);white-space:nowrap}.offline:before{content:"";width:5px;height:5px;background:var(--green);border-radius:50%}.icon-btn{background:transparent;border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;flex-shrink:0}.icon-btn:hover{background:var(--green-bg);color:var(--green)}.menu-btn{display:none}.main{max-width:1270px;padding:36px 44px 28px;margin:auto;min-height:calc(100vh - 77px)}
@@ -18,7 +18,124 @@ html.dark{--bg:#161e1b;--surface:#1d2823;--soft:#25332b;--text:#e2ebe4;--muted:#
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-art{display:none}.hero h1 br{display:none}.hero h1{font-size:29px}.hero-copy{max-width:none}.reader-grid{display:flex;flex-direction:column-reverse;gap:23px}.reading-nav{position:static;width:100%;display:flex;gap:6px;flex-wrap:wrap}.reading-nav h3,.reading-tip{display:none}.section-link{border:1px solid var(--border);padding:6px 9px;border-radius:6px;font-size:10px}.section-link.active{border-color:var(--green)}.article{width:100%}.problem-grid{grid-template-columns:1fr}.stat{padding-left:15px;gap:6px;flex-direction:column}.stat b{font-size:23px}.stat span{font-size:10px}.catalog-head{align-items:start;flex-direction:column;gap:15px}.search-box{width:100%}}
 @media(max-width:700px){.sidebar{transform:translateX(-100%);transition:transform .22s;width:255px;z-index:60}.sidebar.open{transform:translateX(0)}.shell{margin-left:0}.menu-btn{display:inline-flex}.topbar{height:63px;padding:0 18px;gap:9px}.breadcrumb{flex:1;gap:9px;font-size:11px}.breadcrumb>span{display:none}.top-actions{gap:9px}.offline{font-size:10px}.main{padding:22px 18px}.hero{padding:25px 22px;border-radius:13px}.hero h1{font-size:27px;letter-spacing:-1px;margin-top:13px}.hero h1 br{display:block}.hero-copy{font-size:11px}.hero-actions{margin-top:22px;gap:8px}.hero-actions .btn{padding:10px 13px;font-size:11px}.stats{padding:23px 0;margin-bottom:26px}.stat{padding-left:13px;gap:1px}.stat b{font-size:24px}.stat span{font-size:10px}.stat:first-child{padding-left:2px}.catalog-head h2{font-size:20px}.filters{gap:6px;align-items:start}.filter-tabs{gap:1px}.filter-tab{font-size:10px;padding:7px 9px}.difficulty-select{font-size:10px;max-width:100px;padding:6px}.problem-card{padding:16px 12px;gap:9px}.problem-name{font-size:12px}.group-detail{font-size:10px}.category-intro{padding:19px;font-size:12px}.category-group{margin-bottom:26px}.footer{flex-direction:column;gap:5px;font-size:9px;margin-top:32px}.reader-heading h1{font-size:27px}.reader-tools .source{margin:4px 0 0;width:100%}.reader-tools .btn{font-size:11px}.prose{font-size:13px;line-height:1.95}.section-title{font-size:17px}.reader-top{margin-bottom:20px}.reading-nav{gap:5px}.section-link{font-size:10px;padding:5px 7px}.code-block pre{font-size:11px}.line-no{width:30px;margin-right:12px}.finish-note{padding:17px;flex-direction:column;align-items:start}.finish-note .btn{align-self:flex-end}.reader-pagination{gap:8px}.page-link{padding:13px 12px}.page-link b{font-size:11px}.overlay.visible{display:block;position:fixed;inset:0;background:#0f1e1655;z-index:50;backdrop-filter:blur(2px)}.toast{left:50%;max-width:90%;white-space:nowrap}.to-top{right:14px;bottom:15px}.eyebrow{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-@media print{.sidebar,.topbar,.reading-nav,.reader-tools,.reader-top,.reader-pagination,.finish-note,.to-top,.toast,.footer{display:none!important}.shell{margin:0}.main{max-width:none;padding:0}.reader-grid{display:block}.code-block{background:#f1f1f1;color:#111;box-shadow:none}.code-bar{color:#444}.copy-btn{display:none}.code-block pre{white-space:pre-wrap;font-size:9px}.code-line{width:auto;white-space:pre-wrap;overflow-wrap:anywhere}.tok-comment{color:#666}.tok-keyword,.tok-string,.tok-number,.tok-function{color:#111}body{background:#fff;color:#111}.article-section{break-inside:avoid}.reader-heading h1{font-size:24px}}
+@media print{.sidebar,.topbar,.reading-nav,.reader-tools,.reader-top,.reader-pagination,.finish-note,.to-top,.toast,.footer,.panel,.side-due{display:none!important}.shell{margin:0}.main{max-width:none;padding:0}.reader-grid{display:block}.code-block{background:#f1f1f1;color:#111;box-shadow:none}.code-bar{color:#444}.copy-btn{display:none}.code-block pre{white-space:pre-wrap;font-size:9px}.code-line{width:auto;white-space:pre-wrap;overflow-wrap:anywhere}.tok-comment{color:#666}.tok-keyword,.tok-string,.tok-number,.tok-function{color:#111}body{background:#fff;color:#111}.article-section{break-inside:avoid}.reader-heading h1{font-size:24px}}
+
+/* ===== 刷题熟练度 · 复习管理 · 学习统计 ===== */
+.g-tag{display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:650;border-radius:5px;padding:2px 6px;white-space:nowrap;letter-spacing:.2px;line-height:1.7;flex-shrink:0}
+.g-tag.g-none{color:var(--none);background:var(--none-bg)}
+.g-tag.g-A{color:var(--green);background:var(--green-bg)}
+.g-tag.g-B{color:var(--blue);background:var(--blue-bg)}
+.g-tag.g-C{color:var(--gold);background:color-mix(in srgb,var(--gold) 12%,transparent)}
+.g-tag.g-D{color:var(--red);background:color-mix(in srgb,var(--red) 12%,transparent)}
+.review-flag{font-size:9px;font-weight:650;color:var(--red);background:color-mix(in srgb,var(--red) 13%,transparent);border-radius:5px;padding:2px 6px;white-space:nowrap;flex-shrink:0}
+.g-dot{width:7px;height:7px;border-radius:50%;display:inline-block;background:currentColor;opacity:.85;vertical-align:middle}
+.review-dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0;box-shadow:0 0 0 3px color-mix(in srgb,var(--red) 14%,transparent)}
+
+.panel{border:1px solid var(--border);border-radius:13px;background:var(--surface);padding:20px 22px;margin-bottom:22px}
+.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px;flex-wrap:wrap}
+.panel-head h3{font-size:14px;font-weight:650;margin:0;display:flex;align-items:center;gap:8px;min-width:0}
+.panel-head h3 svg{width:16px;height:16px;color:var(--green)}
+.panel-sub{font-size:10px;color:var(--muted)}
+.panel-tools{display:flex;gap:7px;flex-wrap:wrap}
+.mini{display:inline-flex;align-items:center;gap:5px;background:transparent;border:1px solid var(--border);border-radius:6px;font-size:10px;padding:5px 9px;color:var(--muted);min-height:29px;white-space:nowrap}
+.mini:hover{color:var(--green);border-color:var(--green)}
+.mini svg{width:12px;height:12px}
+.mini.danger:hover,.mini.danger-confirm{color:var(--red);border-color:var(--red)}
+.mini.danger-confirm{font-weight:650}
+
+.grade-picker{display:flex;flex-wrap:wrap;gap:6px}
+.grade-picker button{display:inline-flex;align-items:center;font-size:11px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--muted);min-height:36px;transition:border-color .15s,background .15s,color .15s}
+.grade-picker button:hover{border-color:currentColor}
+.grade-picker button i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.45;margin-right:7px;flex-shrink:0}
+.grade-picker button.on{font-weight:650}
+.grade-picker button.on i{opacity:1}
+.grade-picker button.on.g-none{color:var(--none);background:var(--none-bg);border-color:var(--none)}
+.grade-picker button.on.g-A{color:var(--green);background:var(--green-bg);border-color:var(--green)}
+.grade-picker button.on.g-B{color:var(--blue);background:var(--blue-bg);border-color:var(--blue)}
+.grade-picker button.on.g-C{color:var(--gold);background:color-mix(in srgb,var(--gold) 12%,transparent);border-color:var(--gold)}
+.grade-picker button.on.g-D{color:var(--red);background:color-mix(in srgb,var(--red) 12%,transparent);border-color:var(--red)}
+
+.practice-summary{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:11px;color:var(--muted);margin-top:15px;padding-top:14px;border-top:1px solid var(--border)}
+.practice-summary b{color:var(--text);font-weight:650}
+.practice-summary .due{color:var(--red);font-weight:650}
+.practice-summary .due-soon{color:var(--gold);font-weight:650}
+.practice-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+
+.record-form{display:flex;flex-direction:column;gap:10px;background:var(--soft);border-radius:10px;padding:14px;margin-top:13px}
+.record-form.flat{background:transparent;padding:0;margin:0}
+.record-form .row{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.record-form .row.end{justify-content:flex-end;gap:7px}
+.record-form label{font-size:10px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.record-form input,.record-form select{font-size:11px;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:7px;padding:7px 9px;min-height:34px}
+.record-form input[type=text]{flex:1;min-width:140px}
+.btn.danger{color:var(--red);border-color:color-mix(in srgb,var(--red) 35%,var(--border))}
+.btn.danger:hover{background:color-mix(in srgb,var(--red) 9%,transparent);border-color:var(--red)}
+
+.history-list{display:flex;flex-direction:column}
+.history-item{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid var(--border);font-size:11px;min-width:0}
+.history-item:last-child{border-bottom:0}
+.history-when{font-family:ui-monospace,monospace;font-size:10px;color:var(--muted);white-space:nowrap;min-width:100px;display:inline-flex;align-items:center;gap:4px}
+.history-when .approx{font-style:normal;font-size:9px;border:1px solid var(--border);border-radius:3px;padding:0 3px;color:var(--muted)}
+.history-note{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.history-note.empty-note{color:var(--muted);font-style:italic}
+.history-item .mini{padding:4px 7px;min-height:27px}
+.history-item.editing{flex-direction:column;align-items:stretch;gap:10px;background:var(--soft);border-radius:10px;padding:14px;border-bottom:0;margin:4px 0}
+.history-empty{font-size:11px;color:var(--muted);padding:6px 0 2px}
+
+.stat-panel{display:grid;grid-template-columns:minmax(230px,1fr) minmax(240px,1.1fr);gap:26px;align-items:start}
+.dist{display:flex;flex-direction:column;gap:9px}
+.dist-row{display:flex;align-items:center;gap:10px;font-size:11px}
+.dist-row .g-tag{min-width:54px}
+.dist-bar{flex:1;height:7px;border-radius:4px;background:var(--soft);overflow:hidden;min-width:40px}
+.dist-bar i{display:block;height:100%;border-radius:4px;background:var(--none);transition:width .3s}
+.dist-bar i.g-A{background:var(--green)}
+.dist-bar i.g-B{background:var(--blue)}
+.dist-bar i.g-C{background:var(--gold)}
+.dist-bar i.g-D{background:var(--red)}
+.dist-num{font-family:ui-monospace,monospace;font-size:10px;color:var(--muted);min-width:64px;text-align:right;font-variant-numeric:tabular-nums}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:11px}
+.metric{border:1px solid var(--border);border-radius:9px;padding:12px 13px}
+.metric b{display:block;font-size:20px;font-weight:600;letter-spacing:-.5px;font-variant-numeric:tabular-nums;line-height:1.35}
+.metric span{font-size:10px;color:var(--muted)}
+.metric.hot{border-color:color-mix(in srgb,var(--red) 40%,var(--border))}
+.metric.hot b{color:var(--red)}
+
+.side-due{display:flex;align-items:center;gap:7px;margin-top:11px;padding:8px 11px;border-radius:8px;font-size:11px;font-weight:600;color:var(--red);background:color-mix(in srgb,var(--red) 10%,transparent)}
+.side-due svg{width:14px;height:14px}
+.side-due:hover{background:color-mix(in srgb,var(--red) 16%,transparent)}
+
+.filters{flex-wrap:wrap;justify-content:flex-start}
+.filters>label:last-child{margin-left:auto}
+.grade-tabs{border-left:1px solid var(--border);padding-left:10px;min-width:0}
+.filter-tab .g-dot{margin-right:5px;opacity:.5}
+.filter-tab.active .g-dot{opacity:1}
+
+/* 移动端：必须放在本块最后，才能覆盖上面的同名前缀基础规则 */
+@media(max-width:700px){
+.panel{padding:16px 15px;border-radius:11px;margin-bottom:18px}
+.panel-head{gap:9px;margin-bottom:13px}
+.grade-picker{gap:5px}
+.grade-picker button{font-size:10px;padding:7px 9px;min-height:33px}
+.grade-picker button i{margin-right:5px}
+.practice-summary{gap:5px 14px;font-size:10px;margin-top:13px;padding-top:12px}
+.practice-actions{gap:6px}
+.practice-actions .btn{padding:9px 12px;font-size:11px}
+.history-when{min-width:76px;font-size:9px}
+.history-item{gap:6px}
+.history-note{font-size:10px}
+.history-item .mini{padding:4px 6px}
+.stat-panel{grid-template-columns:1fr;gap:17px}
+.metric-grid{grid-template-columns:repeat(2,1fr);gap:9px}
+.metric{padding:10px 11px}
+.metric b{font-size:18px}
+.dist-num{min-width:58px}
+.grade-tabs{border-left:0;padding-left:0}
+.filters{gap:8px 10px;align-items:start}
+.filters>label:last-child{margin-left:0}
+.record-form .row{gap:8px}
+.record-form .row.end{gap:6px}
+.record-form .row.end .btn{padding:9px 13px}
+}
 </style>
 </head>
 <body>
@@ -43,28 +160,28 @@ try{const v=JSON.parse(localStorage.getItem(KEY)||'null');if(v&&typeof v==='obje
 state.done=[...new Set(state.done)];state.stars=[...new Set(state.stars)];
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){storageOK=false;}}
 function applyTheme(){document.documentElement.classList.toggle('dark',state.theme==='dark');const b=document.getElementById('themeButton');b.innerHTML=icon(state.theme==='dark'?'sun':'moon');b.setAttribute('aria-label',state.theme==='dark'?'切换浅色模式':'切换深色模式');}
-let currentRoute={type:'catalog'},filters={query:'',status:'all',difficulty:'all'},observer=null,toastTimer;
+let currentRoute={type:'catalog'},filters={query:'',status:'all',difficulty:'all',grade:'all'},observer=null,toastTimer;
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('visible'),2400);}
-function side(){const active=currentRoute.type==='category'?currentRoute.id:currentRoute.type==='problem'?problem(currentRoute.id)?.category:null;
- document.getElementById('sidebar').innerHTML=`<a class="brand" href="#/catalog"><span class="brand-icon">${icon('code')}</span><span><span class="brand-name">算法手册</span><span class="brand-sub" style="display:block">LEETCODE · HOT 100</span></span></a><a class="nav-home ${currentRoute.type==='catalog'?'active':''}" href="#/catalog" ${currentRoute.type==='catalog'?'aria-current="page"':''}>${icon('grid')}<span>全部题目</span><span class="chapter-count">100</span></a><div class="nav-label">EXPLORE / 算法分类</div><nav class="chapters">${DATA.categories.map(c=>`<a class="chapter-link ${active===c.id?'active':''}" ${active===c.id?'aria-current="page"':''} href="#/category/${c.id}"><span class="chapter-num">${String(c.id).padStart(2,'0')}</span><span>${esc(c.name)}</span><span class="chapter-count">${DATA.problems.filter(p=>p.category===c.id).length}</span></a>`).join('')}</nav><div class="side-bottom"><div class="progress-label"><span>我的学习进度</span><b>${state.done.length} / 100</b></div><div class="progress-track" role="progressbar" aria-label="学习进度" aria-valuenow="${state.done.length}" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:${state.done.length}%"></div></div><div class="local-note">${storageOK?'学习记录自动保存在当前浏览器':'浏览器未允许保存，记录仅本次有效'}</div></div>`;
+function side(){const active=currentRoute.type==='category'?currentRoute.id:currentRoute.type==='problem'?problem(currentRoute.id)?.category:null;const ps=practiceStats();
+ document.getElementById('sidebar').innerHTML=`<a class="brand" href="#/catalog"><span class="brand-icon">${icon('code')}</span><span><span class="brand-name">算法手册</span><span class="brand-sub" style="display:block">LEETCODE · HOT 100</span></span></a><a class="nav-home ${currentRoute.type==='catalog'?'active':''}" href="#/catalog" ${currentRoute.type==='catalog'?'aria-current="page"':''}>${icon('grid')}<span>全部题目</span><span class="chapter-count">100</span></a><div class="nav-label">EXPLORE / 算法分类</div><nav class="chapters">${DATA.categories.map(c=>`<a class="chapter-link ${active===c.id?'active':''}" ${active===c.id?'aria-current="page"':''} href="#/category/${c.id}"><span class="chapter-num">${String(c.id).padStart(2,'0')}</span><span>${esc(c.name)}</span><span class="chapter-count">${DATA.problems.filter(p=>p.category===c.id).length}</span></a>`).join('')}</nav><div class="side-bottom"><div class="progress-label"><span>我的学习进度</span><b>${state.done.length} / 100</b></div><div class="progress-track" role="progressbar" aria-label="学习进度" aria-valuenow="${state.done.length}" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:${state.done.length}%"></div></div>${ps.due?`<a class="side-due" href="#/catalog" data-action="goto-review">${icon('clock')}<span>${ps.due} 题待复习</span></a>`:''}<div class="local-note">${storageOK?'学习记录自动保存在当前浏览器':'浏览器未允许保存，记录仅本次有效'}</div></div>`;
 }
 function footer(){return `<footer class="footer"><span>LeetCode 热题 100 · 分类题解手册</span><span>源文档整理于 2026.09.14 &nbsp; · &nbsp; <a href="${pdfLink()}" target="_blank" rel="noopener">查看原始 PDF ${icon('external').replace('<svg ','<svg style="width:10px;height:10px" ')}</a></span></footer>`;}
 function pdfLink(page){return encodeURI('LeetCode热题100分类题解（完整100题）.pdf')+(page?'#page='+page:'');}
 function badge(p){return `<span class="difficulty ${{'简单':'easy','中等':'medium','困难':'hard'}[p.difficulty]}">${p.difficulty}</span>`;}
-function card(p){const done=state.done.includes(p.id);return `<a href="#/problem/${p.id}" class="problem-card" aria-label="${p.id}. ${esc(p.title)}，${p.difficulty}${done?'，已掌握':''}"><span class="status-dot ${done?'done':''}" aria-hidden="true">${done?icon('check'):''}</span><span class="problem-number">${p.id.toString().padStart(2,'0')}</span><span class="problem-name">${esc(p.title)}</span>${state.stars.includes(p.id)?'<span class="star-dot" aria-label="已收藏">★</span>':''}${badge(p)}${icon('chevron').replace('<svg ','<svg class="card-arrow" ')}</a>`;}
+function card(p){const done=state.done.includes(p.id);return `<a href="#/problem/${p.id}" class="problem-card" aria-label="${p.id}. ${esc(p.title)}，${p.difficulty}${done?'，已掌握':''}"><span class="status-dot ${done?'done':''}" aria-hidden="true">${done?icon('check'):''}</span><span class="problem-number">${p.id.toString().padStart(2,'0')}</span><span class="problem-name">${esc(p.title)}</span>${state.stars.includes(p.id)?'<span class="star-dot" aria-label="已收藏">★</span>':''}${reviewOf(p.id).status==='due'?'<span class="review-dot" title="当前待复习" aria-hidden="true"></span>':''}${gradeChip(p.id)}${badge(p)}${icon('chevron').replace('<svg ','<svg class="card-arrow" ')}</a>`;}
 function hero(){const last=problem(state.last);return `<section class="hero"><div><div class="eyebrow">A LITTLE PROGRESS, EVERY DAY</div><h1>把 100 道热题，<br>读成<em>自己的思路。</em></h1><div class="hero-copy">从第一行代码，到举一反三。<br>按算法分类，循序理解每一道题的思路与解法。</div><div class="hero-actions"><a class="btn primary" href="#/problem/${last?last.id:1}">${last?'继续阅读':'开始第一题'} ${icon('arrow')}</a><button class="btn subtle" data-action="jump-catalog">浏览题目目录 ${icon('grid')}</button></div></div><div class="hero-art" aria-hidden="true"><div class="art-dots"></div><div class="art-label">01 / TWO SUM &nbsp; · &nbsp; target = 9</div><div class="array"><span class="chosen">2</span><span class="chosen">7</span><span>11</span><span>15</span></div><div class="array-indices"><span>0</span><span>1</span><span>2</span><span>3</span></div><div class="art-result">return [0, 1] &nbsp; ✓</div><div class="art-note">每一个解法，都从一个观察开始</div></div></section><section class="stats" aria-label="手册概览"><div class="stat"><b>100</b><span>道完整题解</span></div><div class="stat"><b>17</b><span>个算法分类</span></div><div class="stat"><b>Python</b><span>代码与注释</span></div><div class="stat"><b>${state.done.length}<span style="font-size:14px">%</span></b><span>已掌握进度</span></div></section>`;}
 function catalog(){const c=currentRoute.type==='category'?cat(currentRoute.id):null;
  document.title=(c?c.name+' · ':'')+'LeetCode 热题 100 · 算法手册';
  document.getElementById('breadcrumb').innerHTML=`<a href="#/catalog">学习手册</a><span>/</span><b>${c?esc(c.name):'题目目录'}</b>`;
- document.getElementById('main').innerHTML=`${c?`<div class="catalog-title-large"><div class="eyebrow">CHAPTER ${String(c.id).padStart(2,'0')} / 17</div><h1>${esc(c.name)}</h1><p>${DATA.problems.filter(p=>p.category===c.id).length} 道题目 · ${DATA.problems.filter(p=>p.category===c.id&&state.done.includes(p.id)).length} 道已掌握</p></div><div class="category-intro"><b>${icon('bulb')} &nbsp; 本章核心思想</b><p>${esc(c.intro)}</p></div>`:hero()}<section id="catalog"><div class="catalog-head"><div><h2>${c?'本章题目':'题目目录'} <span style="color:var(--muted);font-size:12px;font-weight:400;margin-left:7px" id="resultCount"></span></h2><p>${c?'理解一类问题，掌握一组方法。':'17 个分类，从基础数据结构到动态规划。'}</p></div><label class="search-box">${icon('search')}<span class="sr-only">搜索题号、题目或分类</span><input id="search" type="search" placeholder="搜索题号、题目或分类…" value="${esc(filters.query)}" autocomplete="off"><kbd>/</kbd></label></div><div class="filters"><div class="filter-tabs" role="group" aria-label="学习状态筛选">${[['all','全部题目'],['todo','未掌握'],['done','已掌握'],['stars','我的收藏']].map(([id,label])=>`<button class="filter-tab ${filters.status===id?'active':''}" data-filter="${id}" aria-pressed="${filters.status===id}">${label}</button>`).join('')}</div><label><span class="sr-only">按难度筛选</span><select class="difficulty-select" id="difficulty">${['all','简单','中等','困难'].map(v=>`<option value="${v}" ${filters.difficulty===v?'selected':''}>${v==='all'?'全部难度':v}</option>`).join('')}</select></label></div><div id="results"></div></section>${footer()}`;
+ document.getElementById('main').innerHTML=`${c?`<div class="catalog-title-large"><div class="eyebrow">CHAPTER ${String(c.id).padStart(2,'0')} / 17</div><h1>${esc(c.name)}</h1><p>${DATA.problems.filter(p=>p.category===c.id).length} 道题目 · ${DATA.problems.filter(p=>p.category===c.id&&state.done.includes(p.id)).length} 道已掌握</p></div><div class="category-intro"><b>${icon('bulb')} &nbsp; 本章核心思想</b><p>${esc(c.intro)}</p></div>`:hero()}${c?'':statsPanel()}<section id="catalog"><div class="catalog-head"><div><h2>${c?'本章题目':'题目目录'} <span style="color:var(--muted);font-size:12px;font-weight:400;margin-left:7px" id="resultCount"></span></h2><p>${c?'理解一类问题，掌握一组方法。':'17 个分类，从基础数据结构到动态规划。'}</p></div><label class="search-box">${icon('search')}<span class="sr-only">搜索题号、题目或分类</span><input id="search" type="search" placeholder="搜索题号、题目或分类…" value="${esc(filters.query)}" autocomplete="off"><kbd>/</kbd></label></div><div class="filters"><div class="filter-tabs" role="group" aria-label="学习状态筛选">${[['all','全部题目'],['todo','未掌握'],['done','已掌握'],['review','待复习'],['stars','我的收藏']].map(([id,label])=>`<button class="filter-tab ${filters.status===id?'active':''}" data-filter="${id}" aria-pressed="${filters.status===id}">${label}</button>`).join('')}</div><div class="filter-tabs grade-tabs" role="group" aria-label="熟练度筛选">${[['all','全部'],['none','未评估'],['A','A 熟练'],['B','B 基本掌握'],['C','C 掌握薄弱'],['D','D 未掌握']].map(([id,label])=>`<button class="filter-tab ${filters.grade===id?'active':''}" data-gradefilter="${id}" aria-pressed="${filters.grade===id}">${id==='all'||id==='none'?'':`<i class="g-dot g-${id}"></i>`}${label}</button>`).join('')}</div><label><span class="sr-only">按难度筛选</span><select class="difficulty-select" id="difficulty">${['all','简单','中等','困难'].map(v=>`<option value="${v}" ${filters.difficulty===v?'selected':''}>${v==='all'?'全部难度':v}</option>`).join('')}</select></label></div><div id="results"></div></section>${footer()}`;
  document.getElementById('search').addEventListener('input',e=>{filters.query=e.target.value;renderResults();});
  document.getElementById('difficulty').addEventListener('change',e=>{filters.difficulty=e.target.value;renderResults();});renderResults();
 }
 function renderResults(){const q=filters.query.toLowerCase().trim();const category=currentRoute.type==='category'?currentRoute.id:null;
- const matched=DATA.problems.filter(p=>(!category||p.category===category)&&(!q||`${p.id} ${p.title} ${cat(p.category).name}`.toLowerCase().includes(q))&&(filters.difficulty==='all'||p.difficulty===filters.difficulty)&&(filters.status==='all'||filters.status==='todo'&&!state.done.includes(p.id)||filters.status==='done'&&state.done.includes(p.id)||filters.status==='stars'&&state.stars.includes(p.id)));
+ const matched=DATA.problems.filter(p=>(!category||p.category===category)&&(!q||`${p.id} ${p.title} ${cat(p.category).name}`.toLowerCase().includes(q))&&(filters.difficulty==='all'||p.difficulty===filters.difficulty)&&statusMatch(p)&&gradeMatch(p));
  document.getElementById('resultCount').textContent=matched.length+' 题';
  document.getElementById('results').innerHTML=matched.length?DATA.categories.map(c=>{const ps=matched.filter(p=>p.category===c.id);return ps.length?`<section class="category-group" aria-labelledby="cat-${c.id}"><div class="group-title"><span class="group-index">${String(c.id).padStart(2,'0')}</span><h3 id="cat-${c.id}">${esc(c.name)}</h3><span class="group-amount">/ ${ps.length} 题</span>${!category?`<a class="group-detail" href="#/category/${c.id}">分类导读 ${icon('chevron')}</a>`:''}</div><div class="problem-grid">${ps.map(card).join('')}</div></section>`:'';}).join(''):`<div class="empty">${icon('search')}<h3>${filters.status==='stars'&&!q?'还没有符合条件的收藏':'没有找到符合条件的题目'}</h3><p>${filters.status==='stars'?'在题解页点击「收藏」，便可在这里随时回顾。':'试试其他题号、关键词，或调整筛选条件。'}</p><button class="btn" data-action="reset-filters">重置筛选</button></div>`;
- document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b.dataset.filter===filters.status);b.setAttribute('aria-pressed',b.dataset.filter===filters.status);});
+ document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b.dataset.filter===filters.status);b.setAttribute('aria-pressed',b.dataset.filter===filters.status);});document.querySelectorAll('[data-gradefilter]').forEach(b=>{b.classList.toggle('active',b.dataset.gradefilter===filters.grade);b.setAttribute('aria-pressed',b.dataset.gradefilter===filters.grade);});
 }
 function joinParagraphs(paragraphs){let result=[];for(const p of paragraphs){if(result.length&&!/^(?:•|\d+\.|输入|输出|解释|示例|方法|注意|思路|关键|具体|为什么|时间|空间|核心|本质|定义|转移|含义|直观|进阶|拓展)/.test(p)&&!/[。！？：:；;）)]$/.test(result[result.length-1])&&result[result.length-1].length>35){let a=result[result.length-1];result[result.length-1]+=a.slice(-1).match(/[a-zA-Z0-9]/)&&p[0]?.match(/[a-zA-Z0-9]/)?' '+p:p;}else result.push(p);}return result;}
 function prose(paragraphs){const ps=joinParagraphs(paragraphs);let out='',list=null,example=false;const closeList=()=>{if(list){out+=`</${list}>`;list=null;}};for(let text of ps){if(/^示例[：:]/.test(text)){closeList();if(example)out+='</div>';out+='<div class="example"><b>EXAMPLE / 示例</b>';example=true;text=text.replace(/^示例[：:]\s*/,'');if(!text)continue;}
@@ -74,20 +191,290 @@ function prose(paragraphs){const ps=joinParagraphs(paragraphs);let out='',list=n
 function highlight(line){const re=/(#[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b(?:def|class|return|if|elif|else|for|while|in|not|and|or|is|None|True|False|from|import|as|with|lambda|yield|break|continue|pass|try|except|finally|raise|nonlocal|global|del|assert)\b|\b\d+(?:\.\d+)?\b|\b[A-Za-z_]\w*(?=\())/g;let result='',pos=0;for(const m of line.matchAll(re)){result+=esc(line.slice(pos,m.index));const t=m[0],type=t.startsWith('#')?'comment':/^['"]/.test(t)?'string':/^\d/.test(t)?'number':/^(def|class|return|if|elif|else|for|while|in|not|and|or|is|None|True|False|from|import|as|with|lambda|yield|break|continue|pass|try|except|finally|raise|nonlocal|global|del|assert)$/.test(t)?'keyword':'function';result+=`<span class="tok-${type}">${esc(t)}</span>`;pos=m.index+t.length;}return result+esc(line.slice(pos));}
 function codeBlock(code){return `<div class="code-block"><div class="code-bar"><span class="code-lang">Python 3</span><button class="copy-btn" data-action="copy">${icon('copy')} 复制代码</button></div><pre tabindex="0" aria-label="Python 参考代码"><code>${code.split('\n').map((l,i)=>`<span class="code-line"><span class="line-no" aria-hidden="true">${i+1}</span>${highlight(l)||' '}</span>`).join('')}</code></pre></div>`;}
 function learnedButton(p){return `<button class="btn ${state.done.includes(p.id)?'primary':''}" data-action="done" aria-pressed="${state.done.includes(p.id)}">${icon('check')} ${state.done.includes(p.id)?'已掌握':'标记已掌握'}</button>`;}
-function reader(){const p=problem(currentRoute.id);state.last=p.id;save();const c=cat(p.category),i=DATA.problems.indexOf(p),prev=DATA.problems[i-1],next=DATA.problems[i+1];document.title=`${p.id}. ${p.title} · LeetCode 热题 100`;
+function reader(){const p=problem(currentRoute.id);state.last=p.id;save();recordDraftOpen=false;editingRecordId=null;pendingDeleteId=null;const c=cat(p.category),i=DATA.problems.indexOf(p),prev=DATA.problems[i-1],next=DATA.problems[i+1];document.title=`${p.id}. ${p.title} · LeetCode 热题 100`;
  document.getElementById('breadcrumb').innerHTML=`<a href="#/catalog">题目目录</a><span>/</span><a href="#/category/${c.id}">${esc(c.name)}</a><span>/</span><b>#${p.id}</b>`;
- document.getElementById('main').innerHTML=`<div class="reader-top"><a class="back-link" href="#/category/${c.id}">${icon('back')} 返回${esc(c.name)}目录</a><span class="reader-position">${String(i+1).padStart(2,'0')} / 100</span></div><header class="reader-heading"><div class="reader-labels"><span>CHAPTER ${String(c.id).padStart(2,'0')}</span><span>·</span><a href="#/category/${c.id}">${esc(c.name)}</a>${badge(p)}</div><h1><span class="title-id">${p.id}.</span>${esc(p.title)}</h1><div class="reader-tools">${learnedButton(p)}<button class="btn" data-action="star" aria-pressed="${state.stars.includes(p.id)}">${icon('star')} ${state.stars.includes(p.id)?'已收藏':'收藏'}</button><a class="source" href="${pdfLink(p.page)}" target="_blank" rel="noopener">原始 PDF · 第 ${p.page} 页 ${icon('external').replace('<svg ','<svg style="width:12px;height:12px" ')}</a></div></header><div class="reader-grid"><article class="article">${p.sections.map((s,n)=>`<section class="article-section" id="section-${n}" aria-labelledby="section-title-${n}"><h2 class="section-title" id="section-title-${n}"><span>${String(n+1).padStart(2,'0')}</span>${s.title}</h2>${s.code?codeBlock(s.code):`<div class="prose ${n===4?'knowledge':n===3?'complexity':''}">${prose(s.paragraphs)}</div>`}</section>`).join('')}<div class="finish-note"><div><b>理解之后，再独立写一遍。</b><p>试着复述核心思路，再用自己的代码验证。</p></div>${learnedButton(p)}</div><nav class="reader-pagination" aria-label="上一题和下一题">${prev?`<a class="page-link" href="#/problem/${prev.id}"><small>← 上一题</small><b>${prev.id}. ${esc(prev.title)}</b></a>`:`<a class="page-link" href="#/catalog"><small>← 返回目录</small><b>探索全部 100 道题</b></a>`}${next?`<a class="page-link next" href="#/problem/${next.id}"><small>下一题 →</small><b>${next.id}. ${esc(next.title)}</b></a>`:`<a class="page-link next" href="#/catalog"><small>已到最后一题 →</small><b>返回目录，回顾学习进度</b></a>`}</nav></article><aside class="reading-nav" aria-label="本题目录"><h3>ON THIS PAGE / 本题</h3>${p.sections.map((s,n)=>`<a class="section-link ${n===0?'active':''}" href="#/problem/${p.id}?section=${n}" data-section="${n}">${s.title}</a>`).join('')}<div class="reading-tip">${icon('bulb')}先理解思路，再尝试动手。<br>每一次独立思考，都会让下一题更容易。</div></aside></div>${footer()}`;
+ document.getElementById('main').innerHTML=`<div class="reader-top"><a class="back-link" href="#/category/${c.id}">${icon('back')} 返回${esc(c.name)}目录</a><span class="reader-position">${String(i+1).padStart(2,'0')} / 100</span></div><header class="reader-heading"><div class="reader-labels"><span>CHAPTER ${String(c.id).padStart(2,'0')}</span><span>·</span><a href="#/category/${c.id}">${esc(c.name)}</a>${badge(p)}<span id="readerGrade">${gradeTag(p.id)}</span></div><h1><span class="title-id">${p.id}.</span>${esc(p.title)}</h1><div class="reader-tools">${learnedButton(p)}<button class="btn" data-action="star" aria-pressed="${state.stars.includes(p.id)}">${icon('star')} ${state.stars.includes(p.id)?'已收藏':'收藏'}</button><a class="source" href="${pdfLink(p.page)}" target="_blank" rel="noopener">原始 PDF · 第 ${p.page} 页 ${icon('external').replace('<svg ','<svg style="width:12px;height:12px" ')}</a></div></header><div class="reader-grid"><article class="article">${p.sections.map((s,n)=>`<section class="article-section" id="section-${n}" aria-labelledby="section-title-${n}"><h2 class="section-title" id="section-title-${n}"><span>${String(n+1).padStart(2,'0')}</span>${s.title}</h2>${s.code?codeBlock(s.code):`<div class="prose ${n===4?'knowledge':n===3?'complexity':''}">${prose(s.paragraphs)}</div>`}</section>`).join('')}<div class="finish-note"><div><b>理解之后，再独立写一遍。</b><p>试着复述核心思路，再用自己的代码验证。</p></div>${learnedButton(p)}</div>${practicePanel(p)}<nav class="reader-pagination" aria-label="上一题和下一题">${prev?`<a class="page-link" href="#/problem/${prev.id}"><small>← 上一题</small><b>${prev.id}. ${esc(prev.title)}</b></a>`:`<a class="page-link" href="#/catalog"><small>← 返回目录</small><b>探索全部 100 道题</b></a>`}${next?`<a class="page-link next" href="#/problem/${next.id}"><small>下一题 →</small><b>${next.id}. ${esc(next.title)}</b></a>`:`<a class="page-link next" href="#/catalog"><small>已到最后一题 →</small><b>返回目录，回顾学习进度</b></a>`}</nav></article><aside class="reading-nav" aria-label="本题目录"><h3>ON THIS PAGE / 本题</h3>${p.sections.map((s,n)=>`<a class="section-link ${n===0?'active':''}" href="#/problem/${p.id}?section=${n}" data-section="${n}">${s.title}</a>`).join('')}<div class="reading-tip">${icon('bulb')}先理解思路，再尝试动手。<br>每一次独立思考，都会让下一题更容易。</div></aside></div>${footer()}`;
  observer=new IntersectionObserver(entries=>{const sections=[...document.querySelectorAll('.article-section')];const active=sections.find(el=>el.getBoundingClientRect().bottom>100)||sections.at(-1);if(active){const id=active.id.replace('section-','');document.querySelectorAll('.section-link').forEach(a=>a.classList.toggle('active',a.dataset.section===id));}},{rootMargin:'-90px 0px -55% 0px',threshold:0});document.querySelectorAll('.article-section').forEach(el=>observer.observe(el));
 }
 function closeMenu(){document.getElementById('sidebar').classList.remove('open');document.getElementById('overlay').classList.remove('visible');document.getElementById('menuButton').setAttribute('aria-expanded','false');document.body.style.overflow='';}
 function navigate(){if(location.hash==='#main')return;const raw=location.hash.slice(1)||'/catalog',m=/^\/(catalog|category|problem)(?:\/(\d+))?(?:\?section=([0-4]))?$/.exec(raw);let next={type:m?m[1]:'catalog',id:m?Number(m[2]):null};if(next.type==='problem'&&!problem(next.id)||next.type==='category'&&!cat(next.id))next={type:'catalog'};const onlySection=next.type==='problem'&&currentRoute.type==='problem'&&next.id===currentRoute.id&&document.querySelector('.article');currentRoute=next;closeMenu();if(!onlySection){observer?.disconnect();side();if(currentRoute.type==='problem')reader();else catalog();window.scrollTo({top:0,behavior:'instant'});}if(m&&m[3]!==undefined)requestAnimationFrame(()=>document.getElementById('section-'+m[3])?.scrollIntoView({behavior:'smooth',block:'start'}));}
-function updateReadingState(){side();const p=problem(currentRoute.id);document.querySelectorAll('[data-action="done"]').forEach(b=>{b.classList.toggle('primary',state.done.includes(p.id));b.setAttribute('aria-pressed',state.done.includes(p.id));b.innerHTML=icon('check')+' '+(state.done.includes(p.id)?'已掌握':'标记已掌握');});document.querySelectorAll('[data-action="star"]').forEach(b=>{b.setAttribute('aria-pressed',state.stars.includes(p.id));b.innerHTML=icon('star')+' '+(state.stars.includes(p.id)?'已收藏':'收藏');});}
+function updateReadingState(){side();const p=problem(currentRoute.id);document.querySelectorAll('[data-action="done"]').forEach(b=>{b.classList.toggle('primary',state.done.includes(p.id));b.setAttribute('aria-pressed',state.done.includes(p.id));b.innerHTML=icon('check')+' '+(state.done.includes(p.id)?'已掌握':'标记已掌握');});document.querySelectorAll('[data-action="star"]').forEach(b=>{b.setAttribute('aria-pressed',state.stars.includes(p.id));b.innerHTML=icon('star')+' '+(state.stars.includes(p.id)?'已收藏':'收藏');});refreshPractice();}
 async function copyCode(){const text=problem(currentRoute.id).sections.find(s=>s.code).code;let copied=false;try{if(navigator.clipboard){await navigator.clipboard.writeText(text);copied=true;}}catch(e){}if(!copied){const area=document.createElement('textarea');area.value=text;area.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.append(area);area.select();try{copied=document.execCommand('copy');}catch(e){}area.remove();}toast(copied?'代码已复制，保留完整缩进':'复制未成功，请在代码区手动选择复制');}
-document.addEventListener('click',e=>{const filter=e.target.closest('[data-filter]');if(filter){filters.status=filter.dataset.filter;renderResults();return;}const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='jump-catalog'){document.getElementById('catalog').scrollIntoView({behavior:'smooth'});return;}if(action==='reset-filters'){filters={query:'',status:'all',difficulty:'all'};document.getElementById('search').value='';document.getElementById('difficulty').value='all';renderResults();return;}if(action==='copy'){copyCode();return;}if(action==='done'||action==='star'){const p=problem(currentRoute.id);if(!p)return;const field=action==='done'?'done':'stars',exists=state[field].includes(p.id);state[field]=exists?state[field].filter(id=>id!==p.id):[...state[field],p.id];save();updateReadingState();toast(action==='done'?(exists?'已改为未掌握':'已记录，继续保持！'):(exists?'已取消收藏':'已加入收藏'));}});
+document.addEventListener('click',e=>{const filter=e.target.closest('[data-filter]');if(filter){filters.status=filter.dataset.filter;renderResults();return;}const gfilter=e.target.closest('[data-gradefilter]');if(gfilter){filters.grade=gfilter.dataset.gradefilter;renderResults();return;}const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action;if(action==='jump-catalog'){document.getElementById('catalog').scrollIntoView({behavior:'smooth'});return;}if(action==='reset-filters'){filters={query:'',status:'all',difficulty:'all',grade:'all'};document.getElementById('search').value='';document.getElementById('difficulty').value='all';renderResults();return;}if(action==='copy'){copyCode();return;}if(action==='done'||action==='star'){const p=problem(currentRoute.id);if(!p)return;const field=action==='done'?'done':'stars',exists=state[field].includes(p.id);state[field]=exists?state[field].filter(id=>id!==p.id):[...state[field],p.id];save();updateReadingState();toast(action==='done'?(exists?'已改为未掌握':'已记录，继续保持！'):(exists?'已取消收藏':'已加入收藏'));return;}if(action==='goto-review'){filters.status='review';filters.grade='all';if(currentRoute.type==='catalog')navigate();else location.hash='/catalog';return;}if(action==='set-grade'){const p=problem(currentRoute.id);if(!p)return;const g=b.dataset.grade||'';setGrade(p.id,g||null);editingRecordId=null;refreshPractice();side();toast(g?'已标记为 '+g+' '+GRADE_DEF[g].full+' · 已重算复习时间':'已重置为未评估');return;}if(action==='record-now'){const p=problem(currentRoute.id);if(!p)return;const g=gradeOf(p.id);addRecord(p.id,{t:Date.now(),g:g,n:''});editingRecordId=null;pendingDeleteId=null;refreshPractice();side();toast(g?'已记录一次刷题 · 按 '+g+' 安排复习':'已记录一次刷题 · 可在上方选择熟练度');return;}if(action==='toggle-manual'){recordDraftOpen=!recordDraftOpen;if(recordDraftOpen){recordDraftDate=todayStr();recordDraftGrade=gradeOf(currentRoute.id)||'';recordDraftNote='';}refreshPractice();return;}if(action==='cancel-manual'){recordDraftOpen=false;refreshPractice();return;}if(action==='save-manual'){const p=problem(currentRoute.id);if(!p)return;const dEl=document.getElementById('manualDate'),gEl=document.getElementById('manualGrade'),nEl=document.getElementById('manualNote');const dStr=(dEl&&dEl.value)||todayStr();const isToday=dStr===todayStr();const t=isToday?Date.now():new Date(dStr+'T12:00:00').getTime();if(!isFinite(t)){toast('日期格式不正确');return;}addRecord(p.id,{t:t,g:(gEl&&gEl.value)||'',n:(nEl&&nEl.value)||'',approx:!isToday});recordDraftOpen=false;editingRecordId=null;refreshPractice();side();toast('已添加 '+dStr+' 的刷题记录');return;}if(action==='edit-record'){editingRecordId=b.dataset.rid;pendingDeleteId=null;refreshPractice();return;}if(action==='cancel-record'){editingRecordId=null;refreshPractice();return;}if(action==='save-record'){const p=problem(currentRoute.id);if(!p)return;const rid=b.dataset.rid,dEl=document.getElementById('recDate'),gEl=document.getElementById('recGrade'),nEl=document.getElementById('recNote');const dStr=(dEl&&dEl.value)||todayStr();const isToday=dStr===todayStr();const t=isToday?Date.now():new Date(dStr+'T12:00:00').getTime();if(!isFinite(t)){toast('日期格式不正确');return;}const g=(gEl&&gEl.value)||'';updateRecord(p.id,rid,{t:t,g:g||null,n:((nEl&&nEl.value)||'').trim().slice(0,200),approx:!isToday});if(g)setGrade(p.id,g);editingRecordId=null;refreshPractice();side();toast('记录已更新，复习时间已重算');return;}if(action==='delete-record'){pendingDeleteId=b.dataset.rid;clearTimeout(pendingDeleteTimer);pendingDeleteTimer=setTimeout(function(){pendingDeleteId=null;refreshPractice();},4000);refreshPractice();return;}if(action==='confirm-delete'){const p=problem(currentRoute.id);if(!p)return;deleteRecord(p.id,b.dataset.rid);pendingDeleteId=null;clearTimeout(pendingDeleteTimer);refreshPractice();side();toast('已删除该条记录');return;}if(action==='export-data'){exportData();return;}if(action==='import-data'){const f=document.getElementById('importFile');if(f)f.click();return;}});
 document.getElementById('themeButton').addEventListener('click',()=>{state.theme=state.theme==='dark'?'light':'dark';applyTheme();save();});
 document.getElementById('menuButton').innerHTML=icon('menu');document.getElementById('menuButton').addEventListener('click',()=>{const open=!document.getElementById('sidebar').classList.contains('open');document.getElementById('sidebar').classList.toggle('open',open);document.getElementById('overlay').classList.toggle('visible',open);document.getElementById('menuButton').setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';if(open)document.querySelector('.sidebar .brand').focus();});
 document.getElementById('overlay').addEventListener('click',closeMenu);document.getElementById('toTop').innerHTML=icon('up');document.getElementById('toTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));window.addEventListener('scroll',()=>document.getElementById('toTop').classList.toggle('visible',window.scrollY>500),{passive:true});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){const wasOpen=document.getElementById('sidebar').classList.contains('open');closeMenu();if(wasOpen)document.getElementById('menuButton').focus();else if(document.activeElement instanceof HTMLInputElement)document.activeElement.blur();}if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();if(currentRoute.type==='problem'){location.hash='/catalog';requestAnimationFrame(()=>document.getElementById('search')?.focus());}else document.getElementById('search')?.focus();}if(e.key==='Tab'&&document.getElementById('sidebar').classList.contains('open')){const links=[...document.querySelectorAll('.sidebar a')];if(e.shiftKey&&document.activeElement===links[0]){e.preventDefault();links.at(-1).focus();}else if(!e.shiftKey&&document.activeElement===links.at(-1)){e.preventDefault();links[0].focus();}}});
+/* ===== 刷题熟练度 · 复习管理 · 学习统计 ===== */
+const PKEY='leetcode100-practice-v1';
+const GRADE_KEYS=['A','B','C','D'];
+const GRADE_DEF={
+  A:{full:'熟练',hint:'不看提示，能独立想出解法并快速实现',days:null},
+  B:{full:'基本掌握',hint:'能独立完成，但思考较久或调试较多',days:7},
+  C:{full:'掌握薄弱',hint:'有一定思路，但需要提示才能完成',days:3},
+  D:{full:'未掌握',hint:'基本没有思路，需要重新学习题解',days:1}
+};
+Object.assign(icons,{
+  stats:'M3 21h18 M6 21V12 M12 21V6 M18 21V9',
+  clock:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18 M12 7.5V12l3.2 2',
+  plus:'M12 5v14 M5 12h14',
+  calendar:'M4 6h16v15H4z M8 3v4 M16 3v4 M4 11h16',
+  download:'M12 3v12 M7 10l5 5 5-5 M4 21h16',
+  upload:'M12 21V9 M7 14l5-5 5 5 M4 3h16',
+  target:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18 M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8',
+  edit:'M4 20h4L19 9l-4-4L4 16z M14 5l4 4',
+  trash:'M4 7h16 M10 4h4 M6 7l1 13h10l1-13 M10 11v6 M14 11v6'
+});
+
+let practice={v:1,proficiency:{},history:{}};
+let editingRecordId=null,pendingDeleteId=null,pendingDeleteTimer=null;
+let recordDraftOpen=false,recordDraftDate='',recordDraftGrade='',recordDraftNote='';
+
+function newRecordId(t){return 'r'+t.toString(36)+Math.random().toString(36).slice(2,6);}
+function loadPractice(){
+  let raw=null;
+  try{raw=JSON.parse(localStorage.getItem(PKEY)||'null');}catch(e){storageOK=false;}
+  if(!raw||typeof raw!=='object'||Array.isArray(raw))return;
+  const prof=raw.proficiency||{},hist=raw.history||{};
+  for(const k in prof){const id=Number(k);if(problem(id)&&GRADE_KEYS.includes(prof[k]))practice.proficiency[id]=prof[k];}
+  for(const k in hist){
+    const id=Number(k);if(!problem(id))continue;
+    const src=Array.isArray(hist[k])?hist[k]:[],clean=[];
+    for(const r of src){
+      if(!r||typeof r.t!=='number'||!isFinite(r.t))continue;
+      clean.push({i:typeof r.i==='string'&&r.i?r.i:newRecordId(r.t),t:r.t,g:GRADE_KEYS.includes(r.g)?r.g:null,n:typeof r.n==='string'?r.n.slice(0,200):'',approx:!!r.approx});
+    }
+    if(clean.length){clean.sort((a,b)=>b.t-a.t);practice.history[id]=clean;}
+  }
+}
+function savePractice(){try{localStorage.setItem(PKEY,JSON.stringify(practice));}catch(e){storageOK=false;}}
+
+function pad2(n){return String(n).padStart(2,'0');}
+function dayStart(v){const d=new Date(v);d.setHours(0,0,0,0);return d;}
+function todayStr(v){const d=v?new Date(v):new Date();return d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate());}
+function fmtDate(d){return (d.getFullYear()===new Date().getFullYear()?'':d.getFullYear()+'-')+pad2(d.getMonth()+1)+'-'+pad2(d.getDate());}
+function fmtWhen(r){const d=new Date(r.t),sameY=d.getFullYear()===new Date().getFullYear(),base=todayStr(d).slice(sameY?5:0);return r.approx?base:base+' '+pad2(d.getHours())+':'+pad2(d.getMinutes());}
+
+function gradeOf(id){return practice.proficiency[id]||null;}
+function gradeName(g){return g?GRADE_DEF[g].full:'未评估';}
+function recordsOf(id){return practice.history[id]||[];}
+function lastRecordOf(id){const r=recordsOf(id);return r.length?r[0]:null;}
+
+function reviewOf(id){
+  const g=gradeOf(id),rec=lastRecordOf(id);
+  if(!g)return{status:'none',due:null,left:null,overdue:0};
+  if(!rec)return{status:'norecord',due:null,left:null,overdue:0};
+  const days=GRADE_DEF[g].days;
+  if(days===null)return{status:'hold',due:null,left:null,overdue:0};
+  const due=dayStart(rec.t);due.setDate(due.getDate()+days);
+  const left=Math.round((due-dayStart(new Date()))/86400000);
+  if(left<=0)return{status:'due',due,left,overdue:-left};
+  if(left===1)return{status:'soon',due,left,overdue:0};
+  return{status:'planned',due,left,overdue:0};
+}
+function reviewText(rv){
+  switch(rv.status){
+    case 'none':return '设置熟练度后可计算复习时间';
+    case 'norecord':return '还没有刷题记录 · 记录首次刷题后开始安排复习';
+    case 'hold':return 'A 熟练 · 暂不安排近期复习';
+    case 'due':return rv.overdue>0?('待复习 · 已逾期 '+rv.overdue+' 天'):'待复习 · 今天到期';
+    case 'soon':return '明天复习 · '+fmtDate(rv.due);
+    default:return rv.left+' 天后复习 · '+fmtDate(rv.due);
+  }
+}
+
+function setGrade(id,g){
+  if(g&&GRADE_KEYS.includes(g))practice.proficiency[id]=g;else delete practice.proficiency[id];
+  savePractice();
+}
+function addRecord(id,opt){
+  const t=opt.t||Date.now();
+  const rec={i:newRecordId(t),t:t,g:opt.g&&GRADE_KEYS.includes(opt.g)?opt.g:null,n:(opt.n||'').trim().slice(0,200),approx:!!opt.approx};
+  const arr=recordsOf(id).slice();arr.push(rec);arr.sort((a,b)=>b.t-a.t);
+  practice.history[id]=arr;
+  if(rec.g)practice.proficiency[id]=rec.g;
+  savePractice();return rec;
+}
+function updateRecord(id,rid,patch){
+  const arr=recordsOf(id).map(r=>r.i===rid?Object.assign({},r,patch):r);
+  arr.sort((a,b)=>b.t-a.t);practice.history[id]=arr;savePractice();
+}
+function deleteRecord(id,rid){
+  const arr=recordsOf(id).filter(r=>r.i!==rid);
+  if(arr.length)practice.history[id]=arr;else delete practice.history[id];
+  savePractice();
+}
+
+function practiceStats(){
+  const prof={A:0,B:0,C:0,D:0,none:0};let total=0,due=0,r7=0,r30=0;
+  const t7=dayStart(new Date());t7.setDate(t7.getDate()-6);
+  const t30=dayStart(new Date());t30.setDate(t30.getDate()-29);
+  const b7=t7.getTime(),b30=t30.getTime();
+  for(const p of DATA.problems){
+    prof[gradeOf(p.id)||'none']++;
+    const rs=recordsOf(p.id);total+=rs.length;
+    for(const r of rs){if(r.t>=b7)r7++;if(r.t>=b30)r30++;}
+    if(reviewOf(p.id).status==='due')due++;
+  }
+  return{prof:prof,assessed:100-prof.none,total:total,due:due,r7:r7,r30:r30};
+}
+
+function collectExport(){
+  return{app:'leetcode-hot100-practice',version:2,exportedAt:new Date().toISOString(),done:state.done,stars:state.stars,last:state.last,theme:state.theme,proficiency:practice.proficiency,history:practice.history};
+}
+function exportData(){
+  try{
+    const blob=new Blob([JSON.stringify(collectExport(),null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download='leetcode-hot100-学习记录-'+todayStr()+'.json';
+    document.body.append(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),4000);
+    toast('已导出学习记录 JSON');
+  }catch(e){toast('导出失败，请重试');}
+}
+function importData(text){
+  let v=null;try{v=JSON.parse(text);}catch(e){return{ok:false,msg:'文件不是有效的 JSON'};}
+  if(!v||typeof v!=='object'||Array.isArray(v))return{ok:false,msg:'文件内容无法识别'};
+  let newDone=0,newRec=0;
+  if(Array.isArray(v.done)){const s=new Set(state.done);for(const id of v.done){if(problem(id)&&!s.has(id)){s.add(id);newDone++;}}state.done=[...s];}
+  if(Array.isArray(v.stars)){const s=new Set(state.stars);for(const id of v.stars)if(problem(id))s.add(id);state.stars=[...s];}
+  if(v.proficiency&&typeof v.proficiency==='object'){for(const k in v.proficiency){const id=Number(k);if(problem(id)&&GRADE_KEYS.includes(v.proficiency[k]))practice.proficiency[id]=v.proficiency[k];}}
+  if(v.history&&typeof v.history==='object'){
+    for(const k in v.history){
+      const id=Number(k);if(!problem(id))continue;
+      const inc=Array.isArray(v.history[k])?v.history[k]:[];
+      const cur=recordsOf(id).slice(),seen=new Set(cur.map(r=>r.i));
+      for(const r of inc){
+        if(!r||typeof r.t!=='number'||!isFinite(r.t))continue;
+        const ri=typeof r.i==='string'&&r.i?r.i:newRecordId(r.t);
+        if(seen.has(ri))continue;
+        seen.add(ri);
+        cur.push({i:ri,t:r.t,g:GRADE_KEYS.includes(r.g)?r.g:null,n:typeof r.n==='string'?r.n.slice(0,200):'',approx:!!r.approx});
+        newRec++;
+      }
+      if(cur.length){cur.sort((a,b)=>b.t-a.t);practice.history[id]=cur;}
+    }
+  }
+  save();savePractice();
+  return{ok:true,msg:'导入完成 · 新增 '+newDone+' 条完成记录、'+newRec+' 条刷题记录'};
+}
+
+function statusMatch(p){
+  const s=filters.status;
+  if(s==='todo')return !state.done.includes(p.id);
+  if(s==='done')return state.done.includes(p.id);
+  if(s==='stars')return state.stars.includes(p.id);
+  if(s==='review')return reviewOf(p.id).status==='due';
+  return true;
+}
+function gradeMatch(p){
+  const g=filters.grade;
+  if(g==='all'||!g)return true;
+  if(g==='none')return !gradeOf(p.id);
+  return gradeOf(p.id)===g;
+}
+function gradeChip(id){
+  const g=gradeOf(id);
+  return g?('<span class="g-tag g-'+g+'" title="熟练度：'+GRADE_DEF[g].full+'">'+g+'</span>'):'';
+}
+function gradeTag(id){
+  const g=gradeOf(id),rv=reviewOf(id);
+  const t=g?('<span class="g-tag g-'+g+'" title="'+GRADE_DEF[g].hint+'">'+g+' '+GRADE_DEF[g].full+'</span>'):'<span class="g-tag g-none">未评估</span>';
+  return t+(rv.status==='due'?'<span class="review-flag">待复习</span>':'');
+}
+function gradePickerHtml(id){
+  const g=gradeOf(id)||'';
+  const items=[['','未评估']].concat(GRADE_KEYS.map(k=>[k,k+' '+GRADE_DEF[k].full]));
+  return items.map(function(it){
+    const k=it[0],label=it[1];
+    return '<button type="button" class="g-'+(k||'none')+(g===k?' on':'')+'" data-action="set-grade" data-grade="'+k+'" aria-pressed="'+(g===k)+'" title="'+(k?GRADE_DEF[k].hint:'还没有进行二刷评估')+'"><i></i>'+label+'</button>';
+  }).join('');
+}
+function manualFormHtml(){
+  const opts=['','A','B','C','D'].map(k=>'<option value="'+k+'"'+(recordDraftGrade===k?' selected':'')+'>'+(k?k+' '+GRADE_DEF[k].full:'不评级')+'</option>').join('');
+  return '<div class="record-form"><div class="row"><label>日期 <input type="date" id="manualDate" value="'+(recordDraftDate||todayStr())+'" max="'+todayStr()+'"></label><label>评级 <select id="manualGrade">'+opts+'</select></label></div><div class="row"><input type="text" id="manualNote" maxlength="120" placeholder="备注（可选），例如：滑动窗口边界条件处理不熟练" value="'+esc(recordDraftNote)+'"></div><div class="row end"><button type="button" class="btn" data-action="cancel-manual">取消</button><button type="button" class="btn primary" data-action="save-manual">添加记录</button></div></div>';
+}
+function practicePanelInner(p){
+  const g=gradeOf(p.id),rv=reviewOf(p.id),rs=recordsOf(p.id),rec=rs[0];
+  const cls=rv.status==='due'?'due':(rv.status==='soon'?'due-soon':'');
+  return '<div class="panel-head"><h3 id="practiceTitle">'+icon('target')+'刷题熟练度</h3><span class="panel-sub">'+gradeName(g)+'</span></div>'
+   +'<div class="grade-picker" role="group" aria-label="设置熟练度">'+gradePickerHtml(p.id)+'</div>'
+   +'<div class="practice-summary"><span>累计刷题 <b>'+rs.length+'</b> 次</span><span>最近刷题 <b>'+(rec?fmtWhen(rec):'—')+'</b></span><span class="'+cls+'">'+reviewText(rv)+'</span></div>'
+   +'<div class="practice-actions"><button type="button" class="btn primary" data-action="record-now">'+icon('plus')+'记录一次刷题</button><button type="button" class="btn" data-action="toggle-manual">'+icon('calendar')+'补录历史日期</button></div>'
+   +'<div id="manualRecordSlot">'+(recordDraftOpen?manualFormHtml():'')+'</div>';
+}
+function historyItemHtml(r){
+  if(editingRecordId===r.i){
+    const opts=['','A','B','C','D'].map(k=>'<option value="'+k+'"'+((r.g||'')===k?' selected':'')+'>'+(k?k+' '+GRADE_DEF[k].full:'不评级')+'</option>').join('');
+    return '<div class="history-item editing"><div class="record-form flat">'
+     +'<div class="row"><label>日期 <input type="date" id="recDate" value="'+todayStr(r.t)+'" max="'+todayStr()+'"></label><label>评级 <select id="recGrade">'+opts+'</select></label></div>'
+     +'<div class="row"><input type="text" id="recNote" maxlength="120" placeholder="备注（可选）" value="'+esc(r.n)+'"></div>'
+     +'<div class="row end"><button type="button" class="btn danger" data-action="delete-record" data-rid="'+r.i+'">删除</button><button type="button" class="btn" data-action="cancel-record">取消</button><button type="button" class="btn primary" data-action="save-record" data-rid="'+r.i+'">保存</button></div>'
+     +'</div></div>';
+  }
+  const pending=pendingDeleteId===r.i;
+  return '<div class="history-item">'
+   +'<span class="history-when">'+fmtWhen(r)+(r.approx?'<i class="approx" title="补录日期">补</i>':'')+'</span>'
+   +(r.g?('<span class="g-tag g-'+r.g+'">'+r.g+'</span>'):'<span class="g-tag g-none">—</span>')
+   +'<span class="history-note'+(r.n?'':' empty-note')+'">'+(r.n?esc(r.n):'无备注')+'</span>'
+   +'<button type="button" class="mini" data-action="edit-record" data-rid="'+r.i+'" aria-label="编辑这条记录">'+icon('edit')+'</button>'
+   +'<button type="button" class="mini'+(pending?' danger-confirm':' danger')+'" data-action="'+(pending?'confirm-delete':'delete-record')+'" data-rid="'+r.i+'" aria-label="'+(pending?'确认删除这条记录':'删除这条记录')+'">'+(pending?'确认删除':icon('trash'))+'</button>'
+   +'</div>';
+}
+function historyBlock(p){
+  const rs=recordsOf(p.id);
+  return '<div class="panel-head"><h3 id="historyTitle">'+icon('clock')+'刷题历史</h3><span class="panel-sub">'+(rs.length?('共 '+rs.length+' 次 · 最近 '+fmtWhen(rs[0])):'暂无记录')+'</span></div>'
+   +'<div class="history-list">'+(rs.length?rs.map(historyItemHtml).join(''):'<div class="history-empty">还没有刷题记录。点上面的「记录一次刷题」即可添加，也可以补录以前的日期。</div>')+'</div>';
+}
+function practicePanel(p){
+  return '<section class="panel" id="practicePanel" aria-labelledby="practiceTitle">'+practicePanelInner(p)+'</section><section class="panel" id="historyPanel" aria-labelledby="historyTitle">'+historyBlock(p)+'</section>';
+}
+function refreshPractice(){
+  if(currentRoute.type!=='problem')return;
+  const p=problem(currentRoute.id);if(!p)return;
+  const a=document.getElementById('practicePanel');if(a)a.innerHTML=practicePanelInner(p);
+  const b=document.getElementById('historyPanel');if(b)b.innerHTML=historyBlock(p);
+  const c=document.getElementById('readerGrade');if(c)c.innerHTML=gradeTag(p.id);
+}
+function rerenderAll(){side();if(currentRoute.type==='problem')reader();else catalog();}
+
+function statsPanel(){
+  const s=practiceStats();
+  const rows=[['none','未评估',s.prof.none]].concat(GRADE_KEYS.map(k=>[k,GRADE_DEF[k].full,s.prof[k]]));
+  const dist=rows.map(function(it){
+    const k=it[0],label=it[1],n=it[2];
+    return '<div class="dist-row"><span class="g-tag g-'+k+'">'+label+'</span><span class="dist-bar"><i class="g-'+k+'" style="width:'+n+'%"></i></span><span class="dist-num">'+n+' 题 · '+n+'%</span></div>';
+  }).join('');
+  const metrics='<div class="metric"><b>'+s.assessed+'</b><span>已评估题目</span></div>'
+   +'<div class="metric'+(s.due?' hot':'')+'"><b>'+s.due+'</b><span>当前待复习</span></div>'
+   +'<div class="metric"><b>'+s.total+'</b><span>累计刷题次数</span></div>'
+   +'<div class="metric"><b>'+s.r7+'</b><span>最近 7 天</span></div>'
+   +'<div class="metric"><b>'+s.r30+'</b><span>最近 30 天</span></div>';
+  return '<section class="panel stats-panel" aria-labelledby="statsTitle">'
+   +'<div class="panel-head"><h3 id="statsTitle">'+icon('stats')+'学习统计</h3><div class="panel-tools"><button type="button" class="mini" data-action="export-data">'+icon('download')+'导出记录</button><button type="button" class="mini" data-action="import-data">'+icon('upload')+'导入记录</button></div></div>'
+   +'<div class="stat-panel"><div class="dist">'+dist+'</div><div class="metric-grid">'+metrics+'</div></div>'
+   +'<input type="file" id="importFile" accept=".json,application/json" class="sr-only" tabindex="-1" aria-hidden="true">'
+   +'</section>';
+}
+
+document.addEventListener('change',function(e){
+  const el=e.target;
+  if(!el||!el.id)return;
+  if(el.id!=='importFile')return;
+  const f=el.files&&el.files[0];el.value='';
+  if(!f)return;
+  if(f.size>8*1024*1024){toast('文件超过 8MB，已取消');return;}
+  const fr=new FileReader();
+  fr.onload=function(){
+    const r=importData(String(fr.result||''));
+    if(!r.ok){toast('导入失败：'+r.msg);return;}
+    rerenderAll();toast(r.msg);
+  };
+  fr.onerror=function(){toast('文件读取失败');};
+  fr.readAsText(f);
+});
+
+loadPractice();
 window.addEventListener('hashchange',navigate);applyTheme();navigate();
 </script>
 </body>
