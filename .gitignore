@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+
+# 本地工作目录（项目笔记与验证脚本），不发布到 Pages
+.workbuddy/
